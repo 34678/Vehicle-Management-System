@@ -1,0 +1,11 @@
+/**index.wxss**/
+.content{
+  /* background-color: wheat; */
+  padding-top:200rpx;
+}
+input{
+  border: 1px solid gray;
+}
+button{
+  margin-top:100rpx;
+}

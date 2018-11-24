@@ -1,0 +1,24 @@
+<!--pages/info/info.wxml-->
+<view class="table"  wx:for="{{userinfo}}">
+  <view class="tr bg-w">
+    <view class="th">车位号：{{item.carsitenum}}</view>
+  </view>
+  <block wx:for="{{item.carnumber}}" >
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">车牌号：{{item}}</view>
+      <button class="edit">编辑</button>
+     <button class="delete">删除</button>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">车牌号：{{item}}</view>
+      <button class="edit" bindtap="edit">编辑</button>
+     <button class="delete">删除</button>
+    </view>
+  </block>
+  <button style="display:inline;" bindtap="add">新增</button>
+  <checkbox-group bindchange="checkboxChange" style="display:inline;margin-left:100rpx;">
+  <label class="checkbox">临时车
+    <checkbox value="临时" checked="{{ifchecked}}"/>
+  </label>
+</checkbox-group>
+</view>

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="content">
+<label>用户名：</label>
+<view class="section">
+   <input placeholder="" auto-focus/>
+</view>
+<label>密码：</label>
+<view class="section">
+    <input password type="number" />
+</view>
+<button bindtap="login"> login </button>
+</view>
+
