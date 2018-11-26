@@ -1,0 +1,19 @@
+<!--pages/rootuser/rootuser.wxml-->
+<view class="content">
+  <label>车牌号：</label>
+  <view class="section">
+    <input placeholder="" auto-focus/>
+  </view>
+  <label>时间：</label>
+  <view class="section">
+    <view class="section__title"></view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        <view class="dataselect">{{date}}</view>
+      </view>
+    </picker>
+  </view>
+  <modal title="确认修改?" confirm-text="确认" cancel-text="取消" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
+  </modal>
+  <button bindtap='change'>修改</button>
+</view>
