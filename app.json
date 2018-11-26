@@ -1,15 +1,14 @@
 {
   "pages":[
-    "pages/info/info",
     "pages/index/index",
+    "pages/info/info",
     "pages/rootuser/rootuser",
     "pages/car/car",
     "pages/rentcar/rentcar"
     
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "车牌管理系统"
   }
 }
 
