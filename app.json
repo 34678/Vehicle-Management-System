@@ -2,7 +2,9 @@
   "pages":[
     "pages/info/info",
     "pages/index/index",
-    "pages/rootuser/rootuser"
+    "pages/rootuser/rootuser",
+    "pages/car/car",
+    "pages/rentcar/rentcar"
     
   ],
   "window":{

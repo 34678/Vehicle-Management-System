@@ -16,13 +16,37 @@ Page({
       }
 
     ],
-    ifchecked:false,
+    ifchecked:{},
   },
-  add:function(){
-
+  add:function(e){
+    let index = e.target.dataset.index;
+    let ifcheck = this.data.ifchecked[index];
+    if(ifcheck){
+      // 临时车
+      wx.navigateTo({
+        url: '../rentcar/rentcar'
+      })
+    }else{
+      // 业主车
+      wx.navigateTo({
+        url: '../car/car'
+      })
+    }
   },
-  edit: function (){
-    
+  edit: function (e){
+    debugger;
+    let id = e.target.dataset.carid;
+    wx.navigateTo({
+      url: `../car/car?carid=${id}`
+    })
+  },
+  checkboxChange(e){
+    let val = e.target.dataset.index;
+    let ifcheck = e.detail.value[0]?true:false;
+    let str = `ifchecked.${val}`;
+    this.setData({
+      [str]: ifcheck
+    })
   },
   /**
    * 生命周期函数--监听页面加载

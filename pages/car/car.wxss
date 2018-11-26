@@ -1,0 +1,9 @@
+/* pages/car/car.wxss */
+ 
+input{
+  border: 1px solid gray;
+}
+ 
+button{
+  margin-top: 100rpx;
+}

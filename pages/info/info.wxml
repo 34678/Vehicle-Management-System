@@ -6,19 +6,20 @@
   <block wx:for="{{item.carnumber}}" >
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">车牌号：{{item}}</view>
-      <button class="edit">编辑</button>
+      <button data-carid="{{item}}" class="edit"bindtap="edit">编辑</button>
      <button class="delete">删除</button>
     </view>
     <view class="tr" wx:else>
       <view class="td">车牌号：{{item}}</view>
-      <button class="edit" bindtap="edit">编辑</button>
+      <button data-carid="{{item}}" class="edit" bindtap="edit">编辑</button>
      <button class="delete">删除</button>
     </view>
   </block>
-  <button style="display:inline;" bindtap="add">新增</button>
-  <checkbox-group bindchange="checkboxChange" style="display:inline;margin-left:100rpx;">
-  <label class="checkbox">临时车
-    <checkbox value="临时" checked="{{ifchecked}}"/>
+  <button style="display:inline;" bindtap="add" data-index="{{index}}" >新增</button>
+  <checkbox-group bindchange="checkboxChange" data-index="{{index}}" style="display:inline;margin-left:100rpx;">
+  <label class="checkbox">
+    临时车
+    <checkbox  value="{{index}}"/>
   </label>
 </checkbox-group>
 </view>

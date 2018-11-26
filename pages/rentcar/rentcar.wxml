@@ -1,0 +1,14 @@
+<label>车牌号：</label>
+<view class="section">
+   <input placeholder="" auto-focus/>
+</view>
+  <label>时间：</label>
+  <view class="section">
+    <view class="section__title"></view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        <view class="dataselect">{{date}}</view>
+      </view>
+    </picker>
+  </view>
+<button>确定</button>
